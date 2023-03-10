@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOSTEN MUSUIC PLAYER</title>
+
+    <link rel="stylesheet" href="ind.css" />
+
+    <link rel="svg" href="house.svg" />
+
+    <link rel="icon" type="image" href="logo.png" />
+
+    <style>
+      body {
+        background-color: rgb(0, 122, 82);
+        font-family: "Comforter", cursive;
+        font-family: "Roboto Condensed", sans-serif;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      nav {
+        position: sticky;
+      }
+
+      nav ul {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        height: 35px;
+        background-color: black;
+        color: aliceblue;
+      }
+
+      li {
+        padding: 0% 7%;
+        /* margin: 12px; */
+      }
+      .b1 img {
+        width: 32px;
+        padding: 0% 1%;
+      }
+
+      .b1 {
+        display: flex;
+        align-items: center;
+        font-weight: bolder;
+        display: flex;
+      }
+
+      .cont1 {
+        height: 75vh;
+        min-height: 92vh;
+        background-color: black;
+        color: wheat;
+        width: 70%;
+        display: flex;
+        margin: 22px auto;
+        border-radius: 12px;
+        padding: 12px;
+        background-image: url("https://source.unsplash.com/random/?song");
+
+        /* position: end; */
+      }
+
+      .bottom {
+        /* position: absolute; */
+        /* background-position: bottom; */
+        position: sticky;
+        background-color: black;
+        height: 76px;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: aliceblue;
+        flex-direction: column;
+      }
+
+      .items {
+        margin-top: 11px;
+        size: 12px;
+      }
+
+      .items i {
+        cursor: pointer;
+        margin-left: 12px;
+        margin-right: 12px;
+        size: 12px;
+      }
+
+      /* .bottom input{
+    position: bottom; 
+} */
+
+      #mybar {
+        width: 90vh;
+        text-align: center;
+        size: 12px;
+        color: green white;
+      }
+
+      .songitem {
+        /* height: 140px; */
+        height: 40px;
+        display: flex;
+        width: 99%;
+        background-color: aliceblue;
+        border-radius: 12px;
+        color: black;
+        margin: 12px 0px;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .songitem img {
+        width: 18px;
+        height: 18px;
+        border-radius: 22px;
+        margin: 0 22px;
+      }
+
+      .timespan {
+        margin: 0 22pz;
+      }
+
+      .timespan i {
+        cursor: pointer;
+        flex-direction: column;
+      }
+
+      .songitemcontainer {
+        margin-top: 9px;
+      }
+
+      .songinfo {
+        position: absolute;
+        left: 0;
+      }
+
+      .songinfo img {
+        width: 30px;
+        height: 26px;
+        padding: 12px;
+        margin-top: 12px;
+        filter: invert(100%);
+      }
+
+      .u1 a {
+        color: aliceblue;
+      }
+
+      .u1 a:hover {
+        /* text-decoration: underline; */
+        text-decoration: wavy;
+        /* color: aliceblue; */
+      }
+
+      .ul a:active {
+        color: green;
+      }
+    </style>
+  </head>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comforter&family=Roboto+Condensed&display=swap"
+    rel="stylesheet"
+  />
+
+  <body>
+    <nav>
+      <ul class="u1">
+        <li class="b1"><img src="logo.png" alt="DOSTEN" /></li>
+        <li class="l1">
+          <a href="ind.html"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-house"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"
+              />
+              <path
+                fill-rule="evenodd"
+                d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"
+              />
+            </svg>
+          </a>
+        </li>
+        <li class="l1">
+          <a href="https://music.youtube.com/search?q=sanamre"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-search"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+              />
+            </svg>
+          </a>
+        </li>
+        <li class="l1">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-collection-play"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M2 3a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 0-1h-11A.5.5 0 0 0 2 3zm2-2a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7A.5.5 0 0 0 4 1zm2.765 5.576A.5.5 0 0 0 6 7v5a.5.5 0 0 0 .765.424l4-2.5a.5.5 0 0 0 0-.848l-4-2.5z"
+            />
+            <path
+              d="M1.5 14.5A1.5 1.5 0 0 1 0 13V6a1.5 1.5 0 0 1 1.5-1.5h13A1.5 1.5 0 0 1 16 6v7a1.5 1.5 0 0 1-1.5 1.5h-13zm13-1a.5.5 0 0 0 .5-.5V6a.5.5 0 0 0-.5-.5h-13A.5.5 0 0 0 1 6v7a.5.5 0 0 0 .5.5h13z"
+            />
+          </svg>
+        </li>
+        <li class="l1">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-person-rolodex"
+            viewBox="0 0 16 16"
+          >
+            <path d="M8 9.05a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
+            <path
+              d="M1 1a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h.5a.5.5 0 0 0 .5-.5.5.5 0 0 1 1 0 .5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5.5.5 0 0 1 1 0 .5.5 0 0 0 .5.5h.5a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H6.707L6 1.293A1 1 0 0 0 5.293 1H1Zm0 1h4.293L6 2.707A1 1 0 0 0 6.707 3H15v10h-.085a1.5 1.5 0 0 0-2.4-.63C11.885 11.223 10.554 10 8 10c-2.555 0-3.886 1.224-4.514 2.37a1.5 1.5 0 0 0-2.4.63H1V2Z"
+            />
+          </svg>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="cont1">
+      <h1 class="l4">REST IN MUSIC...</h1>
+
+      <!--  -->
+      <div class="songlist">
+        <div class="songitemcontainer">
+          <div class="songitem">
+            <img src="bg.jpg" alt="!" />
+            <span> Let Me Love You...</span>
+            <span class="songlistplay">
+              <span class="timespan"> 05:34 </span>
+              <i class="far fa-thin fa-play-circle" class="6t"></i>
+            </span>
+          </div>
+
+          <div class="songitem">
+            <img src="bg.jpg" alt="!" />
+            <span> Let Me Love You...</span>
+            <span class="songlistplay">
+              <span class="timespan"> 05:34 </span>
+              <i class="far fa-thin fa-play-circle" class="6t"></i>
+            </span>
+          </div>
+
+          <div class="songitem">
+            <img src="bg.jpg" alt="!" />
+            <span> Let Me Love You...</span>
+            <span class="songlistplay">
+              <span class="timespan"> 05:34 </span>
+              <i class="far fa-thin fa-play-circle" class="6t"></i>
+            </span>
+          </div>
+
+          <div class="songitem">
+            <img src="bg.jpg" alt="!" />
+            <span> Let Me Love You...</span>
+            <span class="songlistplay">
+              <span class="timespan"> 05:34 </span>
+              <i class="far fa-thin fa-play-circle" class="6t"></i>
+            </span>
+          </div>
+
+          <div class="songitem">
+            <img src="bg.jpg" alt="!" />
+            <span> Let Me Love You...</span>
+            <span class="songlistplay">
+              <span class="timespan"> 05:34 </span>
+              <i class="far fa-thin fa-play-circle" class="6t"></i>
+            </span>
+          </div>
+
+          <div class="songitem">
+            <img src="bg.jpg" alt="!" />
+            <span> Let Me Love You...</span>
+            <span class="songlistplay">
+              <span class="timespan"> 05:34 </span>
+              <i class="far fa-thin fa-play-circle" class="6t"></i>
+            </span>
+          </div>
+
+          <div class="songitem">
+            <img src="bg.jpg" alt="!" />
+            <span> Let Me Love You...</span>
+            <span class="songlistplay">
+              <span class="timespan"> 05:34 </span>
+              <i class="far fa-thin fa-play-circle" class="6t"></i>
+            </span>
+          </div>
+
+          <div class="songitem">
+            <img src="bg.jpg" alt="!" />
+            <span> Let Me Love You...</span>
+            <span class="songlistplay">
+              <span class="timespan"> 05:34 </span>
+              <i class="far fa-thin fa-play-circle" class="6t"></i>
+            </span>
+          </div>
+
+          <div class="songitem">
+            <img src="bg.jpg" alt="!" />
+            <span> Let Me Love You...</span>
+            <span class="songlistplay">
+              <span class="timespan"> 05:34 </span>
+              <i class="far fa-thin fa-play-circle" class="6t"></i>
+            </span>
+          </div>
+
+          <div class="songitem">
+            <img src="bg.jpg" alt="!" />
+            <span> Let Me Love You...</span>
+            <span class="songlistplay">
+              <span class="timespan"> 05:34 </span>
+              <i class="far fa-thin fa-play-circle" class="6t"></i>
+            </span>
+          </div>
+
+          <div class="songitem">
+            <img src="bg.jpg" alt="!" />
+            <span> Let Me Love You...</span>
+            <span class="songlistplay">
+              <span class="timespan"> 05:34 </span>
+              <i class="far fa-thin fa-play-circle" class="6t"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!--  -->
+      <div class="banner">
+        <div class="3aa"></div>
+      </div>
+    </div>
+
+    <div class="bottom">
+      <input type="range" id="mybar" min="0" max="100" />
+
+      <div class="items">
+        <!-- fontawesome icons -->
+        <i class="fas fa-thin fa-step-backward" class="6t"></i>
+        <i class="far fa-thin fa-play-circle" class="6t"></i>
+        <i class="fas fa-thin fa-step-forward" class="6t"></i>
+      </div>
+
+      <div class="songinfo">
+        <!-- <img src="https://tenor.com/view/sound-gif-23229777" alt="Let Me Love You...."> -->
+        <img src="sound.gif" alt="Let Me Love You...." />
+      </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/26504e4a1f.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="ind.js"></script>
+  </body>
+</html>
